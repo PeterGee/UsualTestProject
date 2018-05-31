@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <net.edaibu.testapplication.view.CustomTextView
+        android:id="@+id/tv_text_three"
+        android:layout_width="145dp"
+        android:layout_height="20dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/color_white"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/cb_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择框"
+        android:textSize="12sp"
+        android:theme="@style/CustomCheckBoxTheme"
+        android:visibility="gone"/>
+
+    <com.bm.library.PhotoView
+        android:id="@+id/photo_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/cb_checkbox"
+        android:src="@mipmap/bg_001"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_anim_text"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/color_black"
+        android:gravity="center"
+        android:stateListAnimator="@animator/animation_drawable"
+        android:text="hahah"
+        android:textColor="@color/color_white"
+        android:visibility="gone"/>
+<Button
+    android:id="@+id/tv_change_language"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@+id/tv_anim_text"
+    android:text="@string/change_language"
+    />
+
+    <com.github.florent37.diagonallayout.DiagonalLayout
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        app:diagonal_position="bottom"
+        android:background="@null"
+        >
+        <TextView
+            android:id="@+id/tv_logout_second"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_recharge_gradient"
+            android:text="退出登录"
+            android:textColor="@color/color_white"
+            android:textSize="17sp"
+            android:gravity="center"/>
+    </com.github.florent37.diagonallayout.DiagonalLayout>
+
+
+
+
+
+</RelativeLayout>

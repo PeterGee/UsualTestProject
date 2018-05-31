@@ -1,0 +1,5 @@
+<resources>
+    <string name="content_hint">hello i am marquee text</string>
+    <string name="app_name">TestApplication</string>
+    <string name="change_language">改变语言</string>
+</resources>
