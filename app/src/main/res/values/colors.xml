@@ -14,4 +14,7 @@
     <color name="color_1fc37f">#1FC37F</color>
     <color name="color_27cb87">#27CB87</color>
     <color name="blue">#0000ff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white2">#f5f3f3</color>
+    <color name="colorRed">#d50f09</color>
 </resources>
