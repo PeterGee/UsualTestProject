@@ -11,6 +11,7 @@ import android.view.View;
 import net.gepergee.usualtestproject.R;
 
 /**
+ *  圆形进度条
  * @author petergee
  * @date 2018/5/31
  */
@@ -90,7 +91,7 @@ public class CustomProgressOne extends View {
         mRingPaint.setColor(mRingColor);
         mRingPaint.setStyle(Paint.Style.STROKE);
         mRingPaint.setStrokeWidth(mStrokeWidth);
-        //mRingPaint.setStrokeCap(Paint.Cap.ROUND);//设置线冒样式，有圆 有方
+        mRingPaint.setStrokeCap(Paint.Cap.ROUND);//设置线冒样式，有圆 有方
 
         //中间字
         mTextPaint = new Paint();
@@ -130,7 +131,7 @@ public class CustomProgressOne extends View {
             oval.top = (mYCenter - mRingRadius);
             oval.right = mRingRadius * 2 + (mXCenter - mRingRadius);
             oval.bottom = mRingRadius * 2 + (mYCenter - mRingRadius);
-            canvas.drawArc(oval, -90, ((float)mProgress / mTotalProgress) * 360, false, mRingPaint); //
+            canvas.drawArc(oval, -90, ((float)mProgress / mTotalProgress) * 360, false, mRingPaint);
 
             //字体
             String txt = mProgress + "%";

@@ -95,6 +95,10 @@
         </activity>
 
         <activity android:name=".activity.customview.CustomViewActivity">
+
+        </activity>
+
+        <activity android:name=".activity.statusBar.StatusBarTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

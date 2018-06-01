@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tc="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <net.gepergee.usualtestproject.activity.customview.CustomProgressOne
         android:id="@+id/tasks_view"
         android:layout_width="223dp"
         android:layout_height="223dp"
+        android:visibility="gone"
         tc:circleColor="@color/white"
         tc:radius="50dip"
         tc:ringBgColor="@color/color_gray"
         tc:ringColor="@color/two"
-        tc:strokeWidth="10dip"
+        tc:strokeWidth="10dip" />
+
+    <net.gepergee.usualtestproject.activity.customview.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bg_001"
+        android:layout_centerInParent="true"
         />
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
