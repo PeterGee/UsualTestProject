@@ -55,17 +55,11 @@
         </activity-alias>
 
 
-        <activity android:name=".activity.CustomViewTestActivity">
+        <activity android:name=".activity.CustomViewTestActivity"></activity>
 
-        </activity>
+        <activity android:name=".activity.CustomTextActivity"></activity>
 
-        <activity android:name=".activity.CustomTextActivity">
-
-        </activity>
-
-        <activity android:name=".activity.TranslateAnimActivity">
-
-        </activity>
+        <activity android:name=".activity.TranslateAnimActivity"></activity>
 
         <activity android:name=".activity.javaCallJs.JsCallJavaActivity">
             <intent-filter>
@@ -88,17 +82,15 @@
 
         <activity android:name=".activity.ThreadPoolTest"></activity>
 
-        <activity android:name=".activity.AsyncTaskTestActivity">
-        </activity>
+        <activity android:name=".activity.AsyncTaskTestActivity"></activity>
 
-        <activity android:name=".socket.SocketTestOne">
-        </activity>
+        <activity android:name=".socket.SocketTestOne"></activity>
 
-        <activity android:name=".activity.customview.CustomViewActivity">
+        <activity android:name=".activity.customview.CustomViewActivity"></activity>
 
-        </activity>
+        <activity android:name=".activity.statusBar.StatusBarTestActivity"></activity>
 
-        <activity android:name=".activity.statusBar.StatusBarTestActivity">
+        <activity android:name=".activity.scroller.ScrollerLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
