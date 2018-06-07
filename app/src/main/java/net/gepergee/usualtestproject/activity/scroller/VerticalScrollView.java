@@ -20,7 +20,7 @@ import android.widget.Scroller;
  * @author petergee
  * @date 2018/6/4
  */
-public class HorizontalScrollView extends ViewGroup {
+public class VerticalScrollView extends ViewGroup {
 
     /**
      * 用于完成滚动操作的实例
@@ -50,7 +50,7 @@ public class HorizontalScrollView extends ViewGroup {
     // 滚动的上下边界
     private int topBorder,bottomBorder;
 
-    public HorizontalScrollView(Context context, AttributeSet attrs) {
+    public VerticalScrollView(Context context, AttributeSet attrs) {
         super(context, attrs);
         // 第一步，创建Scroller的实例
         mScroller = new Scroller(context);

@@ -91,6 +91,9 @@
         <activity android:name=".activity.statusBar.StatusBarTestActivity"></activity>
 
         <activity android:name=".activity.scroller.ScrollerLayoutActivity">
+        </activity>
+
+        <activity android:name=".activity.customview.CustomViewActivityTwo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
