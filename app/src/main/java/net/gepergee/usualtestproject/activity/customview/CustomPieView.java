@@ -7,7 +7,6 @@ import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
-
 import java.util.ArrayList;
 import java.util.List;
 

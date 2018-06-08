@@ -5,5 +5,10 @@
 <net.gepergee.usualtestproject.activity.customview.CustomPieView
     android:id="@+id/custom_pie"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:visibility="gone"/>
+
+    <net.gepergee.usualtestproject.activity.customview.CanvasNormalUseOne
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
