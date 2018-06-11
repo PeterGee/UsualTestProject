@@ -7,6 +7,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import net.gepergee.usualtestproject.R;
+import net.gepergee.usualtestproject.activity.customview.canvas.CustomPieView;
+import net.gepergee.usualtestproject.activity.customview.path.ThirdOrderBezierView;
 
 /**
  * @author petergee

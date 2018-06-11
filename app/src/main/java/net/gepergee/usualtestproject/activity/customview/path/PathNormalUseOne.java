@@ -1,4 +1,4 @@
-package net.gepergee.usualtestproject.activity.customview;
+package net.gepergee.usualtestproject.activity.customview.path;
 
 import android.content.Context;
 import android.graphics.Canvas;

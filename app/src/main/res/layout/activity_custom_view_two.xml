@@ -3,23 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <net.gepergee.usualtestproject.activity.customview.CustomPieView
+    <net.gepergee.usualtestproject.activity.customview.canvas.CustomPieView
         android:id="@+id/custom_pie"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.CanvasNormalUseOne
+    <net.gepergee.usualtestproject.activity.customview.canvas.CanvasNormalUseOne
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.PathNormalUseOne
+    <net.gepergee.usualtestproject.activity.customview.path.PathNormalUseOne
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.ThirdOrderBezierView
+    <net.gepergee.usualtestproject.activity.customview.path.ThirdOrderBezierView
         android:id="@+id/bezier_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,12 @@
         android:text="控制点2"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.BezierHeartView
+    <net.gepergee.usualtestproject.activity.customview.path.BezierHeartView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <net.gepergee.usualtestproject.activity.customview.path.FinalPathView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </RelativeLayout>

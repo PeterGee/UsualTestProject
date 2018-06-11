@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import net.gepergee.usualtestproject.R;
+import net.gepergee.usualtestproject.activity.customview.canvas.CustomProgressOne;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

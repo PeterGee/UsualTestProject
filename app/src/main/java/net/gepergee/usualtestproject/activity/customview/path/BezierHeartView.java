@@ -1,11 +1,10 @@
-package net.gepergee.usualtestproject.activity.customview;
+package net.gepergee.usualtestproject.activity.customview.path;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.PointF;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -19,8 +18,6 @@ public class BezierHeartView extends View {
 
         private Paint mPaint;
         private int mCenterX, mCenterY;
-
-        private PointF mCenter = new PointF(0,0);
         private float mCircleRadius = 200;                  // 圆的半径
         private float mDifference = mCircleRadius*C;        // 圆形的控制点与数据点的差值
 
