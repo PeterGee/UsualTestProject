@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 
 import net.gepergee.usualtestproject.R;
 import net.gepergee.usualtestproject.bean.AbilityBean;
-import net.gepergee.usualtestproject.view.CustomPolygon;
+import net.gepergee.usualtestproject.customview.view.CustomPolygon;
 
 
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <net.gepergee.usualtestproject.activity.customview.canvas.CustomProgressOne
+    <net.gepergee.usualtestproject.customview.canvas.CustomProgressOne
         android:id="@+id/tasks_view"
         android:layout_width="223dp"
         android:layout_height="223dp"
@@ -15,7 +15,7 @@
         tc:ringColor="@color/two"
         tc:strokeWidth="10dip" />
 
-    <net.gepergee.usualtestproject.activity.customview.canvas.CircleImageView
+    <net.gepergee.usualtestproject.customview.canvas.CircleImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/bg_001"

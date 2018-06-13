@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.bm.library.PhotoView;
 import net.gepergee.usualtestproject.R;
-import net.gepergee.usualtestproject.view.CustomTextView;
+import net.gepergee.usualtestproject.customview.view.CustomTextView;
 import java.util.Locale;
 
 /**

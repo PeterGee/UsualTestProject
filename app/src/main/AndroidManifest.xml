@@ -87,14 +87,14 @@
 
         <activity android:name=".socket.SocketTestOne"></activity>
 
-        <activity android:name=".activity.customview.CustomViewActivity"></activity>
+        <activity android:name=".customview.normaluse.CustomViewActivity"></activity>
 
         <activity android:name=".activity.statusBar.StatusBarTestActivity"></activity>
 
-        <activity android:name=".activity.scroller.ScrollerLayoutActivity">
+        <activity android:name=".customview.scroller.ScrollerLayoutActivity">
         </activity>
 
-        <activity android:name=".activity.customview.CustomViewActivityTwo">
+        <activity android:name=".customview.CustomViewActivityTwo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

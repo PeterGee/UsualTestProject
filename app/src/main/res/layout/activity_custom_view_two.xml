@@ -3,23 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <net.gepergee.usualtestproject.activity.customview.canvas.CustomPieView
+    <net.gepergee.usualtestproject.customview.canvas.CustomPieView
         android:id="@+id/custom_pie"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.canvas.CanvasNormalUseOne
+    <net.gepergee.usualtestproject.customview.canvas.CanvasNormalUseOne
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.path.PathNormalUseOne
+    <net.gepergee.usualtestproject.customview.path.PathNormalUseOne
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.path.ThirdOrderBezierView
+    <net.gepergee.usualtestproject.customview.path.ThirdOrderBezierView
         android:id="@+id/bezier_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,12 +40,22 @@
         android:text="控制点2"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.path.BezierHeartView
+    <net.gepergee.usualtestproject.customview.path.BezierHeartView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
 
-    <net.gepergee.usualtestproject.activity.customview.path.FinalPathView
+    <net.gepergee.usualtestproject.customview.path.FinalPathView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <net.gepergee.usualtestproject.customview.matrix.CustomMatrixView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <net.gepergee.usualtestproject.customview.path.PathMeasureView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
