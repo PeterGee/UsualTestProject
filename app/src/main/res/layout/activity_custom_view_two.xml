@@ -76,5 +76,11 @@
         android:id="@+id/rb_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="选择1"/>
+        android:text="选择1"
+        android:visibility="gone"/>
+
+    <net.gepergee.usualtestproject.customview.eventDispatch.RemoteControlMenuView
+        android:id="@+id/remote_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

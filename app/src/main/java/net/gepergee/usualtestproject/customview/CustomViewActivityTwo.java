@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.CheckBox;
@@ -13,6 +14,7 @@ import android.widget.RadioButton;
 
 import net.gepergee.usualtestproject.R;
 import net.gepergee.usualtestproject.customview.canvas.CustomPieView;
+import net.gepergee.usualtestproject.customview.eventDispatch.RemoteControlMenuView;
 import net.gepergee.usualtestproject.customview.matrix.Rotate3dAnimation;
 import net.gepergee.usualtestproject.customview.path.ThirdOrderBezierView;
 import net.gepergee.usualtestproject.customview.view.MyRadioButton;
@@ -27,6 +29,7 @@ public class CustomViewActivityTwo extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_view_two);
+        Log.e("tag","onCreate");
         init();
     }
 
@@ -85,14 +88,38 @@ public class CustomViewActivityTwo extends Activity {
         rbOne.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Log.e("tag","isChecked== "+b);
                 buttonView.setChecked(!b);
                 b=!b;
-                Log.e("tag","isChecked== "+b);
             }
         });
 
+        RemoteControlMenuView remoteControlMenuView=findViewById(R.id.remote_view);
+        remoteControlMenuView.setMenuListener(new RemoteControlMenuView.MenuListener() {
+            @Override
+            public void onLeftClicked() {
+                Log.e("tag","left");
+            }
 
+            @Override
+            public void onRightClicked() {
+                Log.e("tag","right");
+            }
+
+            @Override
+            public void onTopClicked() {
+                Log.e("tag","top");
+            }
+
+            @Override
+            public void onDownClicked() {
+                Log.e("tag","down");
+            }
+
+            @Override
+            public void onCenterClicked() {
+                Log.e("tag","center");
+            }
+        });
 
     }
 
