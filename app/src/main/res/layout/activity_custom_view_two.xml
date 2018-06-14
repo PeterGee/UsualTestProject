@@ -57,5 +57,24 @@
 
     <net.gepergee.usualtestproject.customview.path.PathMeasureView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bg_001"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <net.gepergee.usualtestproject.customview.matrix.CustomMatrixCamera
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <net.gepergee.usualtestproject.customview.view.MyRadioButton
+        android:id="@+id/rb_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择1"/>
 </RelativeLayout>
