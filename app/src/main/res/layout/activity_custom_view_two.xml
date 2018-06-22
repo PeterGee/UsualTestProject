@@ -53,34 +53,50 @@
     <net.gepergee.usualtestproject.customview.matrix.CustomMatrixView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <net.gepergee.usualtestproject.customview.path.PathMeasureView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/iv_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/bg_001"
         android:layout_centerInParent="true"
-        android:visibility="gone"/>
+        android:src="@mipmap/bg_001"
+        android:visibility="gone" />
 
     <net.gepergee.usualtestproject.customview.matrix.CustomMatrixCamera
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <net.gepergee.usualtestproject.customview.view.MyRadioButton
         android:id="@+id/rb_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="选择1"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <net.gepergee.usualtestproject.customview.eventDispatch.RemoteControlMenuView
         android:id="@+id/remote_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <net.gepergee.usualtestproject.customview.multiTouch.PointerDragView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+  <TextView
+      android:id="@+id/tv_click_me"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="点我"
+      android:textColor="@color/white"
+      android:background="@color/blue"
+      android:textSize="20sp"
+      android:layout_margin="8dp"/>
 </RelativeLayout>
