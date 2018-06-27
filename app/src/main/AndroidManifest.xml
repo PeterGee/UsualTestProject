@@ -94,6 +94,10 @@
         <activity android:name=".customview.scroller.ScrollerLayoutActivity"></activity>
 
         <activity android:name=".customview.CustomViewActivityTwo">
+
+        </activity>
+
+        <activity android:name=".glide.GlideTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -101,8 +105,6 @@
             </intent-filter>
 
         </activity>
-
-        <activity android:name=".glide.GlideTestActivity"></activity>
     </application>
 
 </manifest>
