@@ -2,6 +2,7 @@ package net.gepergee.usualtestproject.http;
 
 import android.os.Handler;
 import android.os.Message;
+import android.telephony.VisualVoicemailService;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,6 +12,8 @@ import java.text.NumberFormat;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Cache;
+import okhttp3.CacheControl;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -71,11 +74,42 @@ public class NetHttp {
                     builder.connectTimeout(15, TimeUnit.SECONDS);
                     builder.readTimeout(15,TimeUnit.SECONDS);
                     builder.writeTimeout(15,TimeUnit.SECONDS);
+                    // 设置okHttp缓存
+                    // builder.cache(new Cache(new File(""),1000));
                     mOkHttpClient=builder.build();
+
                 }
         }
         return mOkHttpClient;
     }
+
+    /**
+     * 设置okHttp缓存
+     */
+    private static void setCacheMethod() {
+        CacheControl control=new CacheControl.Builder().maxAge(60, TimeUnit.SECONDS).build();
+        Request request=new Request.Builder().url("").cacheControl(control).build();
+        try {
+            Response response=mOkHttpClient.newCall(request).execute();
+            // 关闭响应
+            response.body().close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void forceCache(){
+        CacheControl control=new CacheControl.Builder().maxAge(60, TimeUnit.SECONDS).onlyIfCached().build();
+        Request request=new Request.Builder().url("").cacheControl(control).build();
+        try {
+            Response response=mOkHttpClient.newCall(request).execute();
+            // 关闭响应
+            response.body().close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * 上传文件
