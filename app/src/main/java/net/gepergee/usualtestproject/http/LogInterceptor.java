@@ -4,6 +4,7 @@ import android.util.Log;
 
 import java.io.IOException;
 
+import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -21,6 +22,17 @@ public class LogInterceptor implements Interceptor {
         Log.e("tag","request= "+request.method()+request.url()+request.body()+request.headers());
         Response response=chain.proceed(request);
         Log.e("tag","response= "+response.body().string());
+
+        // addParams(request);
         return response.newBuilder().body(ResponseBody.create(response.body().contentType(),response.body().toString())).build();
+    }
+
+    /**
+     * 通过interceptor添加参数
+     * @param request
+     */
+    private void addParams(Request request) {
+        HttpUrl httpUrl=request.url().newBuilder().addQueryParameter("key","value").build();
+        request.newBuilder().url(httpUrl).build();
     }
 }
