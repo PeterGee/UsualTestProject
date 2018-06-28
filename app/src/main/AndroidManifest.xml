@@ -98,6 +98,9 @@
         </activity>
 
         <activity android:name=".glide.GlideTestActivity">
+        </activity>
+
+        <activity android:name=".http.NetTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
