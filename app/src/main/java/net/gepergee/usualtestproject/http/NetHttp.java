@@ -67,16 +67,17 @@ public class NetHttp {
     private static synchronized OkHttpClient getOkHttp(){
         if (mOkHttpClient==null){
                 if (mOkHttpClient==null){
-                    OkHttpClient.Builder builder=new OkHttpClient.Builder();
+                    // OkHttpClient.Builder builder=new OkHttpClient.Builder();
+                    OkHttpClient.Builder newBuilder=new OkHttpClient().newBuilder();
                     // 设置网络拦截器
-                    // builder.addNetworkInterceptor(new LogInterceptor());
-                    builder.addInterceptor(new LogInterceptor());
-                    builder.connectTimeout(15, TimeUnit.SECONDS);
-                    builder.readTimeout(15,TimeUnit.SECONDS);
-                    builder.writeTimeout(15,TimeUnit.SECONDS);
+                    // newBuilder.addNetworkInterceptor(new LogInterceptor());
+                    newBuilder.addInterceptor(new LogInterceptor());
+                    newBuilder.connectTimeout(15, TimeUnit.SECONDS);
+                    newBuilder.readTimeout(15,TimeUnit.SECONDS);
+                    newBuilder.writeTimeout(15,TimeUnit.SECONDS);
                     // 设置okHttp缓存
-                    // builder.cache(new Cache(new File(""),1000));
-                    mOkHttpClient=builder.build();
+                    // newBuilder.cache(new Cache(new File(""),1000));
+                    mOkHttpClient=newBuilder.build();
 
                 }
         }
