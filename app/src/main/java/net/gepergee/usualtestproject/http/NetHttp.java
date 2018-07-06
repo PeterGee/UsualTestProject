@@ -67,7 +67,7 @@ public class NetHttp {
     private static synchronized OkHttpClient getOkHttp(){
         if (mOkHttpClient==null){
                 if (mOkHttpClient==null){
-                    // OkHttpClient.Builder builder=new OkHttpClient.Builder();
+                     OkHttpClient.Builder builder=new OkHttpClient.Builder();
                     OkHttpClient.Builder newBuilder=new OkHttpClient().newBuilder();
                     // 设置网络拦截器
                     // newBuilder.addNetworkInterceptor(new LogInterceptor());
@@ -76,13 +76,13 @@ public class NetHttp {
                     newBuilder.readTimeout(15,TimeUnit.SECONDS);
                     newBuilder.writeTimeout(15,TimeUnit.SECONDS);
                     // 设置okHttp缓存
-                    // newBuilder.cache(new Cache(new File(""),1000));
+                    newBuilder.cache(new Cache(new File(""),1000));
                     mOkHttpClient=newBuilder.build();
-
                 }
         }
         return mOkHttpClient;
     }
+
 
     /**
      * 设置okHttp缓存
