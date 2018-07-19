@@ -98,13 +98,12 @@
 
         </activity>
 
-        <activity android:name=".glide.GlideTestActivity">
-        </activity>
+        <activity android:name=".glide.GlideTestActivity"></activity>
 
-        <activity android:name=".http.NetTestActivity">
-        </activity>
+        <activity android:name=".http.NetTestActivity"></activity>
 
-        <activity android:name=".db.DbTestActivity">
+        <activity android:name=".db.DbTestActivity"></activity>
+        <activity android:name=".activity.slideDelete.SlideDeleteActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

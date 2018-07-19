@@ -23,6 +23,7 @@ import java.util.Locale;
 
 public class CustomTextActivity extends Activity {
 
+
     private TextView tvChangeLanguage;
     private boolean isChange=false;
 

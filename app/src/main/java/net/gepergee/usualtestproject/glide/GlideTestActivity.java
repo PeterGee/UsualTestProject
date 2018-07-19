@@ -75,15 +75,15 @@ public class GlideTestActivity extends Activity {
                 .apply(options) // 设置RequestOptions
                 .into(imgPic);
 
-       Glide.with(this).asGif().preload(400,400);
-        FutureTarget<File> target = Glide.with(this).load(url).downloadOnly(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
+      // Glide.with(this).asGif().preload(400,400);
+      /*  FutureTarget<File> target = Glide.with(this).load(url).downloadOnly(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL);
         try {
             File file = target.get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }
+        }*/
         handlerTestMethod(imgPic);
 
         //设置lruCache缓存大小
