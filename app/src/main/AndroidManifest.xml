@@ -23,7 +23,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:extractNativeLibs="false">
 
         <meta-data
             android:name="TINKER_ID"
@@ -104,11 +105,14 @@
         <activity android:name=".http.NetTestActivity"></activity>
 
         <activity android:name=".db.DbTestActivity"></activity>
-        <activity android:name=".activity.slideDelete.SlideDeleteActivity">
-        </activity>
+        <activity android:name=".activity.slideDelete.SlideDeleteActivity"></activity>
 
 
         <activity android:name=".activity.x5WebView.X5WebViewActivity">
+
+        </activity>
+
+        <activity android:name=".mvp.view.MvpTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

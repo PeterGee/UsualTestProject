@@ -6,6 +6,7 @@ import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -25,7 +26,9 @@ public class AnimActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // setContentView(R.layout.activity_main);
+        View view=LayoutInflater.from(getApplicationContext()).inflate(R.layout.activity_main,null);
+        setContentView(view);
         init();
     }
 

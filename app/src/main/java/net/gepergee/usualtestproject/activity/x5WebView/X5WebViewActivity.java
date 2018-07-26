@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
+
+import com.tencent.smtt.sdk.TbsReaderView;
+
 import net.gepergee.usualtestproject.R;
 
 /**
@@ -69,5 +72,6 @@ public class X5WebViewActivity extends Activity {
             mX5WebView.destroy();
         super.onDestroy();
     }
+
 
 }
