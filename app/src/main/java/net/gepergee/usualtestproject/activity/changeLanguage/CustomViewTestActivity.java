@@ -1,4 +1,4 @@
-package net.gepergee.usualtestproject.activity;
+package net.gepergee.usualtestproject.activity.changeLanguage;
 
 import android.app.Activity;
 import android.os.Bundle;

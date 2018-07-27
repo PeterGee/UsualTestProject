@@ -19,12 +19,12 @@
     <application
         android:name=".application.APPApplication"
         android:allowBackup="true"
+        android:extractNativeLibs="false"
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:extractNativeLibs="false">
+        android:theme="@style/AppTheme">
 
         <meta-data
             android:name="TINKER_ID"
@@ -59,11 +59,11 @@
         </activity-alias>
 
 
-        <activity android:name=".activity.CustomViewTestActivity"></activity>
+        <activity android:name=".activity.changeLanguage.CustomViewTestActivity"></activity>
 
-        <activity android:name=".activity.CustomTextActivity"></activity>
+        <activity android:name=".activity.changeLanguage.CustomTextActivity"></activity>
 
-        <activity android:name=".activity.TranslateAnimActivity"></activity>
+        <activity android:name=".activity.widget.TranslateAnimActivity"></activity>
 
         <activity android:name=".activity.javaCallJs.JsCallJavaActivity">
             <intent-filter>
@@ -82,11 +82,11 @@
             android:name=".activity.recycleview.RecycleViewActivity"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".activity.HandlerActivity"></activity>
+        <activity android:name=".activity.widget.HandlerActivity"></activity>
 
-        <activity android:name=".activity.ThreadPoolTest"></activity>
+        <activity android:name=".activity.widget.ThreadPoolTest"></activity>
 
-        <activity android:name=".activity.AsyncTaskTestActivity"></activity>
+        <activity android:name=".activity.widget.AsyncTaskTestActivity"></activity>
 
         <activity android:name=".socket.SocketTestOne"></activity>
 
@@ -113,6 +113,12 @@
         </activity>
 
         <activity android:name=".mvp.view.MvpTestActivity">
+
+        </activity>
+
+        <activity
+            android:name=".activity.multiColumnList.MultiColumnListActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

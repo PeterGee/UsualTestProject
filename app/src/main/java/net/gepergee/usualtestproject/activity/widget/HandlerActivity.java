@@ -1,4 +1,4 @@
-package net.gepergee.usualtestproject.activity;
+package net.gepergee.usualtestproject.activity.widget;
 
 import android.app.Activity;
 import android.os.Build;
@@ -46,24 +46,6 @@ public class HandlerActivity extends Activity {
 
             }
         });
-
-
-      /*  mHandler.postAtTime(new Runnable() {
-            @Override
-            public void run() {
-                Log.e("tag","sleep1100");
-                sendMessageMethod();
-            }
-        },1100);
-        */
-
-      /*mHandler.postDelayed(new Runnable() {
-          @Override
-          public void run() {
-              Log.e("tag","postDelayed");
-              sendMessageMethod();
-          }
-      },1200);*/
     }
 
     /**
@@ -89,19 +71,6 @@ public class HandlerActivity extends Activity {
         Log.e("tag", "message  wat=" + message.what);   // message  wat=0
 
     }
-
-  /*  Handler mHandler=new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what){
-                case 100:
-                    String s= (String) msg.obj;
-                    Log.e("tag",s);
-                    break;
-            }
-        }
-    };*/
 
     Handler.Callback mCallBack = new Handler.Callback() {
         @Override

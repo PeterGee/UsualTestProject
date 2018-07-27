@@ -1,4 +1,4 @@
-package net.gepergee.usualtestproject.activity;
+package net.gepergee.usualtestproject.activity.widget;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
