@@ -1,12 +1,18 @@
 package net.gepergee.usualtestproject.activity.multiColumnList;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.Window;
 import android.widget.Toast;
 import net.gepergee.usualtestproject.R;
 import net.gepergee.usualtestproject.activity.multiColumnList.adapter.FirstLineAdapter;
@@ -36,6 +42,7 @@ public class MultiColumnListActivity extends Activity {
     }
 
     private void initData() {
+        Log.e("tag","initData");
         list = new ArrayList<>();
         list.add("于谦");
         list.add("郭德纲");
@@ -59,11 +66,12 @@ public class MultiColumnListActivity extends Activity {
         list4.add("唱歌");
         list4.add("说相声");
         list4.add("做采访");
-
+    
 
     }
 
     private void initView() {
+        Log.e("tag","initView");
         RecyclerView recyclerView=findViewById(R.id.rv_recyclerview_one);
         final RecyclerView recyclerViewTwo=findViewById(R.id.rv_recyclerview_two);
         // layoutManager
@@ -108,9 +116,21 @@ public class MultiColumnListActivity extends Activity {
 
             @Override
             public void onItemLongClickListener(int position) {
+                dialogPop(MultiColumnListActivity.this);
                 Toast.makeText(getApplicationContext(),"LongClicked "+list.get(position),Toast.LENGTH_SHORT).show();
             }
         });
+
+    }
+
+    private void dialogPop(Context context) {
+       Dialog dialog=new Dialog(context);
+       dialog.setContentView(android.R.layout.select_dialog_item);
+       dialog.setCancelable(true);
+       dialog.setCanceledOnTouchOutside(true);
+       Window window = dialog.getWindow();
+       window.setGravity(Gravity.CENTER);
+       dialog.show();
 
     }
 }

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.edaibu.bluetoothdemo.MainActivity">
+
+    <Button
+        android:id="@+id/btn_checkBlueTooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="检测蓝牙" />
+
+    <Button
+        android:id="@+id/btn_openBlueTooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开蓝牙" />
+
+    <Button
+        android:id="@+id/btn_CloseBlueTooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关闭蓝牙" />
+
+    <Button
+        android:id="@+id/btn_ScanBlueTooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="扫描蓝牙" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/tv_open_lock"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="开锁"
+            android:background="#00ff00"
+            android:layout_margin="2dp"
+           />
+        <Button
+            android:id="@+id/tv_close_lock"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="关锁"
+            android:background="#00ff00"
+            android:layout_margin="2dp"
+           />
+        <Button
+            android:id="@+id/tv_flashing_light"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="闪灯"
+            android:background="#00ff00"
+            android:layout_margin="2dp"
+           />
+        <Button
+            android:id="@+id/tv_buzzing"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="响铃"
+            android:background="#00ff00"
+            android:layout_margin="2dp"
+           />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_bluetooth_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp" />
+    <ListView
+        android:id="@+id/lvDevices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

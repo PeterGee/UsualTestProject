@@ -67,7 +67,6 @@ public class NetHttp {
     private static synchronized OkHttpClient getOkHttp(){
         if (mOkHttpClient==null){
                 if (mOkHttpClient==null){
-                     OkHttpClient.Builder builder=new OkHttpClient.Builder();
                     OkHttpClient.Builder newBuilder=new OkHttpClient().newBuilder();
                     // 设置网络拦截器
                     // newBuilder.addNetworkInterceptor(new LogInterceptor());
