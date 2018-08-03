@@ -127,7 +127,11 @@
         <activity
             android:name=".activity.multiColumnList.MultiColumnListActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
 
@@ -140,11 +144,6 @@
         <activity
             android:name=".activity.intentService.IntentServiceActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

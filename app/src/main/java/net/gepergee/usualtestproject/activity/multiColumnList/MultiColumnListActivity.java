@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
@@ -42,7 +44,6 @@ public class MultiColumnListActivity extends Activity {
     }
 
     private void initData() {
-        Log.e("tag","initData");
         list = new ArrayList<>();
         list.add("于谦");
         list.add("郭德纲");
@@ -71,7 +72,6 @@ public class MultiColumnListActivity extends Activity {
     }
 
     private void initView() {
-        Log.e("tag","initView");
         RecyclerView recyclerView=findViewById(R.id.rv_recyclerview_one);
         final RecyclerView recyclerViewTwo=findViewById(R.id.rv_recyclerview_two);
         // layoutManager
@@ -116,13 +116,54 @@ public class MultiColumnListActivity extends Activity {
 
             @Override
             public void onItemLongClickListener(int position) {
-                dialogPop(MultiColumnListActivity.this);
+                // dialogPop(MultiColumnListActivity.this);
+                alertDialogPop(MultiColumnListActivity.this);
                 Toast.makeText(getApplicationContext(),"LongClicked "+list.get(position),Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 
+    /**
+     * alertDialog 使用
+     * @param context
+     */
+    private void alertDialogPop(Context context) {
+        AlertDialog dialog=new AlertDialog.Builder(context).create();
+        dialog.setTitle("AlertDialog");
+        // View view= LayoutInflater.from(this).inflate(R.layout.layout_alert_dialog,null);
+        // dialog.setView(view);
+
+        Message message=Message.obtain();
+        message.what=1;
+        message.obj="alertDialog";
+        dialog.setButton(DialogInterface.BUTTON_POSITIVE, "确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Log.e("tag","confirm clicked");
+            }
+        });
+        dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Log.e("tag","cancel clicked");
+            }
+        });
+        dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "中立", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Log.e("tag","neutral clicked");
+            }
+        });
+        dialog.setIcon(R.mipmap.ic_action_add);
+        dialog.show();
+        dialog.setCancelable(false);
+    }
+
+    /**
+     * dialog 使用
+     * @param context
+     */
     private void dialogPop(Context context) {
        Dialog dialog=new Dialog(context);
        dialog.setContentView(android.R.layout.select_dialog_item);

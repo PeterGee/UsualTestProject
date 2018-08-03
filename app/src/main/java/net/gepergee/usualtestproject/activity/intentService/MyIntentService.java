@@ -3,6 +3,7 @@ package net.gepergee.usualtestproject.activity.intentService;
 import android.app.IntentService;
 import android.content.Intent;
 import android.support.annotation.Nullable;
+import android.webkit.WebView;
 
 
 /**
