@@ -141,7 +141,11 @@
         <activity android:name=".activity.threadPool.ThreadPoolTestActivity">
         </activity>
 
-        <activity android:name=".permission.DynamicPermissionActivity">
+        <activity android:name=".permission.DynamicPermissionActivity"/>
+
+        <activity android:name=".kotlin.KotlinTestActivity"/>
+
+        <activity android:name=".kotlin.KotlinRecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

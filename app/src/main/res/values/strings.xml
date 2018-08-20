@@ -135,5 +135,6 @@
     <string name="action_bar">ActionBar</string>
     <string name="subtitle">subTitle</string>
     <string name="dialog_title">Title</string>
+    <string name="control">控制</string>
 </resources>
 
