@@ -1,6 +1,8 @@
 package net.gepergee.usualtestproject.activity.threadPool;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -31,6 +33,7 @@ public class ThreadPoolTestActivity extends Activity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thread_pool);
         initView();
+        ActivityManager manager= (ActivityManager) getSystemService(ACTIVITY_SERVICE);
     }
 
     private void initView() {

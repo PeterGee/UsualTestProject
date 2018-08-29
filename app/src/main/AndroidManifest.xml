@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -135,17 +135,19 @@
             android:name=".activity.intentService.IntentServiceActivity"
             android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".activity.window.WindowActivity">
+        <activity android:name=".activity.window.WindowActivity"></activity>
+
+        <activity android:name=".activity.threadPool.ThreadPoolTestActivity"></activity>
+
+        <activity android:name=".permission.DynamicPermissionActivity" />
+
+        <activity android:name=".kotlin.KotlinTestActivity">
+
         </activity>
 
-        <activity android:name=".activity.threadPool.ThreadPoolTestActivity">
-        </activity>
+        <activity android:name=".kotlin.KotlinRecyclerViewActivity"></activity>
 
-        <activity android:name=".permission.DynamicPermissionActivity"/>
-
-        <activity android:name=".kotlin.KotlinTestActivity"/>
-
-        <activity android:name=".kotlin.KotlinRecyclerViewActivity">
+        <activity android:name=".activity.webView.MyWebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

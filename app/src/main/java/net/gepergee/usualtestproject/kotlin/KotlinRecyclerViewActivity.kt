@@ -1,6 +1,7 @@
 package net.gepergee.usualtestproject.kotlin
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.DividerItemDecoration
@@ -37,25 +38,33 @@ class KotlinRecyclerViewActivity : Activity() {
 
     private fun initView() {
         val mRecyclerView = findViewById<RecyclerView>(R.id.rv_list)
+
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
+
         // layoutManager
         mRecyclerView.layoutManager = layoutManager
+
         // itemDecoration
         val itemDecoration = DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
         itemDecoration.setDrawable(resources.getDrawable(R.drawable.divider_line))
         mRecyclerView.addItemDecoration(itemDecoration)
+
         // animation
         mRecyclerView.itemAnimator = DefaultItemAnimator()
+
         // setAdapter
         val adapter = KotlinRecycleAdapter(this, list)
         mRecyclerView.adapter = adapter
         // itemClick
-        adapter!!.setOnKotlinItemClickListener(object : KotlinRecycleAdapter.IKotlinItemClickListener {
+        /*adapter!!.setOnKotlinItemClickListener(object : KotlinRecycleAdapter.IKotlinItemClickListener {
             override fun onItemClickListener(position: Int) {
                 Toast.makeText(applicationContext, list!![position], Toast.LENGTH_SHORT).show()
+                var  intent= Intent()
+                intent.setClass(this@KotlinRecyclerViewActivity,KotlinTestActivity::class.java)
+                startActivity(intent)
             }
-        })
+        })*/
 
     }
 }

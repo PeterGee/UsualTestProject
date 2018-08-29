@@ -1,6 +1,7 @@
 package net.gepergee.usualtestproject.kotlin
 
 import android.app.Activity
+import android.app.FragmentTransaction
 import android.os.Bundle
 import android.util.Log
 import net.gepergee.usualtestproject.R
@@ -16,7 +17,16 @@ class KotlinTestActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin_test)
         initView()
+        initFragment()
 
+    }
+
+    private fun initFragment() {
+        var fragmentManager=fragmentManager
+        val transaction = fragmentManager.beginTransaction()
+        var fragment=LazyFragment()
+        transaction.add(R.id.fragment_content,fragment)
+        transaction.commitAllowingStateLoss()
     }
 
     private fun initView() {

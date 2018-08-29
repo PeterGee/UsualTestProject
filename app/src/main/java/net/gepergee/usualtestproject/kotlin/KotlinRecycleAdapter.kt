@@ -1,6 +1,7 @@
 package net.gepergee.usualtestproject.kotlin
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -38,7 +39,8 @@ class KotlinRecycleAdapter : RecyclerView.Adapter<KotlinRecycleAdapter.MyHolder>
 
         // 点击事件
         holder.itemView.setOnClickListener {
-            itemClickListener!!.onItemClickListener(position)
+            // itemClickListener!!.onItemClickListener(position)
+            context!!.startActivity(Intent(context,KotlinTestActivity::class.java))
         }
 
     }
@@ -48,10 +50,12 @@ class KotlinRecycleAdapter : RecyclerView.Adapter<KotlinRecycleAdapter.MyHolder>
         var text: TextView = itemView!!.findViewById(R.id.item_text)
     }
 
+    // 提供set方法
     fun setOnKotlinItemClickListener(itemClickListener: IKotlinItemClickListener) {
         this.itemClickListener = itemClickListener
     }
 
+    // 自定义接口
     interface IKotlinItemClickListener {
         fun onItemClickListener(position: Int)
     }
