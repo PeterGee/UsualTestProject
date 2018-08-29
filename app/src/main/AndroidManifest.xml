@@ -148,6 +148,9 @@
         <activity android:name=".kotlin.KotlinRecyclerViewActivity"></activity>
 
         <activity android:name=".activity.webView.MyWebViewActivity">
+        </activity>
+
+        <activity android:name=".customview.IndexView.CustomIndexViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
