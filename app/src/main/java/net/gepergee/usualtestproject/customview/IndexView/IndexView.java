@@ -91,13 +91,11 @@ public class IndexView extends View {
                     touchIndex = index;
                 //防止数组越界
                 if (listener != null && 0 <= touchIndex && touchIndex <= words.length - 1) {
-                    //回调按下的字母
                     listener.wordsChange(words[touchIndex]);
                 }
                 invalidate();
                 break;
             case MotionEvent.ACTION_UP:
-                //手指抬起,不做任何操作
                 break;
         }
         return true;
@@ -114,12 +112,10 @@ public class IndexView extends View {
         }
     }
 
-    /*手指按下了哪个字母的回调接口*/
     public interface onWordsChangeListener {
         void wordsChange(String words);
     }
 
-    /*设置手指按下字母改变监听*/
     public void setOnWordsChangeListener(onWordsChangeListener listener) {
         this.listener = listener;
     }

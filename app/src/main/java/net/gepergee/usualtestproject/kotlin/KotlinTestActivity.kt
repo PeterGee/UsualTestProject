@@ -25,7 +25,7 @@ class KotlinTestActivity : Activity() {
         var fragmentManager=fragmentManager
         val transaction = fragmentManager.beginTransaction()
         var fragment=LazyFragment()
-        transaction.add(R.id.fragment_content,fragment)
+        // transaction.add(R.id.fragment_content,fragment)
         transaction.commitAllowingStateLoss()
     }
 

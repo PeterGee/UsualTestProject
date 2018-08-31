@@ -1,13 +1,17 @@
 package net.gepergee.usualtestproject.activity.webView;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import net.gepergee.usualtestproject.R;
+
+import java.util.Locale;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
@@ -25,6 +29,8 @@ public class MyWebViewActivity extends Activity {
         initWebViewSetting(webView);
         // 使用该list可以防止出现fast-fail异常
         CopyOnWriteArrayList<String> list=new CopyOnWriteArrayList<>();
+        String s=getCurrentUserAgent();
+        Log.e("tag","ua is "+s);
     }
 
     private void initWebViewSetting(WebView mWebView) {
@@ -59,5 +65,49 @@ public class MyWebViewActivity extends Activity {
                 super.onPageFinished(view, url);
             }
          });
+    }
+
+    private synchronized String getCurrentUserAgent() {
+        Locale locale;
+        synchronized(this) {
+            locale = Locale.CHINESE;
+        }
+        StringBuffer buffer = new StringBuffer();
+        // Add version
+        final String version = Build.VERSION.RELEASE;
+        if (version.length() > 0) {
+            buffer.append(version);
+        } else {
+            // default to "1.0"
+            buffer.append("1.0");
+        }
+        buffer.append("; ");
+        final String language = locale.getLanguage();
+        if (language != null) {
+            buffer.append(language.toLowerCase());
+            final String country = locale.getCountry();
+            if (country != null) {
+                buffer.append("-");
+                buffer.append(country.toLowerCase());
+            }
+        } else {
+            // default to "en"
+            buffer.append("en");
+        }
+        // add the model for the release build
+        if ("REL".equals(Build.VERSION.CODENAME)) {
+            final String model = Build.MODEL;
+            if (model.length() > 0) {
+                buffer.append("; ");
+                buffer.append(model);
+            }
+        }
+        final String id = Build.ID;
+        if (id.length() > 0) {
+            buffer.append(" Build/");
+            buffer.append(id);
+        }
+        String s1=getResources().getString(R.string.web_user_agent);
+        return  String.format(s1, buffer);
     }
 }

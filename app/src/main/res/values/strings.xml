@@ -136,5 +136,6 @@
     <string name="subtitle">subTitle</string>
     <string name="dialog_title">Title</string>
     <string name="control">控制</string>
+    <string name="web_user_agent">Mozilla/5.0 (Linux; U; Android %s) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</string>
 </resources>
 
