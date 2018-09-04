@@ -35,7 +35,7 @@
             android:name="TINKER_ID"
             android:value="tinker_id_6235657" />
 
-        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.MainActivity" />
 
         <activity-alias
             android:name=".ElevenActivity"
@@ -64,11 +64,11 @@
         </activity-alias>
 
 
-        <activity android:name=".activity.changeLanguage.CustomViewTestActivity"/>
+        <activity android:name=".activity.changeLanguage.CustomViewTestActivity" />
 
-        <activity android:name=".activity.changeLanguage.CustomTextActivity"/>
+        <activity android:name=".activity.changeLanguage.CustomTextActivity" />
 
-        <activity android:name=".activity.widget.TranslateAnimActivity"/>
+        <activity android:name=".activity.widget.TranslateAnimActivity" />
 
         <activity android:name=".activity.javaCallJs.JsCallJavaActivity">
             <intent-filter>
@@ -123,6 +123,7 @@
             android:screenOrientation="portrait" />
 
         <service android:name=".activity.intentService.MyIntentService" />
+        <service android:name=".activity.service.MyService" />
 
         <activity
             android:name=".activity.intentService.IntentServiceActivity"
@@ -134,20 +135,20 @@
 
         <activity android:name=".permission.DynamicPermissionActivity" />
 
-        <activity android:name=".kotlin.KotlinTestActivity" >
-        </activity>
+        <activity android:name=".kotlin.KotlinTestActivity"></activity>
 
         <activity android:name=".kotlin.KotlinRecyclerViewActivity" />
 
-        <activity android:name=".activity.webView.MyWebViewActivity" >
+        <activity android:name=".activity.webView.MyWebViewActivity" />
+
+        <activity android:name=".customview.IndexView.CustomIndexViewActivity" />
+
+        <activity android:name=".activity.service.ServiceTestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity android:name=".customview.IndexView.CustomIndexViewActivity">
         </activity>
     </application>
 

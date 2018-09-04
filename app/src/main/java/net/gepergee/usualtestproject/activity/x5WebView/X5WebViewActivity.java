@@ -1,6 +1,7 @@
 package net.gepergee.usualtestproject.activity.x5WebView;
 
 import android.app.Activity;
+import android.app.Service;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
@@ -8,6 +9,8 @@ import android.view.KeyEvent;
 import com.tencent.smtt.sdk.TbsReaderView;
 
 import net.gepergee.usualtestproject.R;
+
+import java.util.LinkedList;
 
 /**
  * @author petergee
@@ -17,7 +20,6 @@ public class X5WebViewActivity extends Activity {
 
     private X5WebView mX5WebView;
     private String url="http://app.html5.qq.com/navi/index";
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

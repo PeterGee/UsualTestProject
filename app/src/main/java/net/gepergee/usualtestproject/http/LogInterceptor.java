@@ -33,6 +33,6 @@ public class LogInterceptor implements Interceptor {
      */
     private void addParams(Request request) {
         HttpUrl httpUrl=request.url().newBuilder().addQueryParameter("key","value").build();
-        request.newBuilder().url(httpUrl).build();
+        request.newBuilder().addHeader("header","header").url(httpUrl).build();
     }
 }
