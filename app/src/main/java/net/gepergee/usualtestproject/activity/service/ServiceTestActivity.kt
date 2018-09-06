@@ -8,9 +8,13 @@ import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
 import android.os.RemoteException
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 
 import net.gepergee.aidlservice.IMyAidlInterface
 import net.gepergee.usualtestproject.R
@@ -21,6 +25,9 @@ import net.gepergee.usualtestproject.R
  */
 class ServiceTestActivity : Activity(), View.OnClickListener {
     private var isBinded: Boolean = false
+    private lateinit var textView:TextView
+
+
 
     private val connection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName, service: IBinder) {
@@ -52,6 +59,8 @@ class ServiceTestActivity : Activity(), View.OnClickListener {
         btnStopService.setOnClickListener(this)
         val btnBindService = findViewById<Button>(R.id.btn_bind__service)
         btnBindService.setOnClickListener(this)
+        textView=findViewById(R.id.tv_textview)
+
 
     }
 

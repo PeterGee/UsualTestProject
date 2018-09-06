@@ -1,8 +1,6 @@
 package net.gepergee.usualtestproject.javaCaculate;
 
 
-import android.os.Handler;
-
 /**
  * @author petergee
  * @date 2018/5/16

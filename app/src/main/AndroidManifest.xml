@@ -120,7 +120,7 @@
 
         <activity
             android:name=".toolBar.ToolBarActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"></activity>
 
         <service android:name=".activity.intentService.MyIntentService" />
         <service android:name=".activity.service.MyService" />
