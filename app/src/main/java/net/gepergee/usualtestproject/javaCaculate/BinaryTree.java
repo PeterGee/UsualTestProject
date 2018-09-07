@@ -1,7 +1,5 @@
 package net.gepergee.usualtestproject.javaCaculate;
 
-import android.content.Intent;
-
 import java.util.Stack;
 
 /**
