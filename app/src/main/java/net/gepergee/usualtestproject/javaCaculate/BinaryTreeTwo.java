@@ -27,7 +27,7 @@ public class BinaryTreeTwo {
         }
         tree = new TreeNode(s);
         if (index == 0) {
-            // 创建根节点
+            // 创建根结点
            root = tree;
         }
         list.remove(0);
