@@ -2,7 +2,8 @@ package net.gepergee.usualtestproject.javaCaculate;
 
 import java.util.ArrayList;
 
-/** 生成二叉树
+/**
+ * 生成二叉树
  * @author petergee
  * @date 2018/9/7
  */
